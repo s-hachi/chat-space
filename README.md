@@ -40,8 +40,8 @@
 
 |Column|Type|Option|
 |------|----|------|
-|group_id|integer|unique: true, foreign_key: true|
-|user_id|integer|unique: true, foreign_key: true|
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 |message|text||
 |update|date|null: false|
 
