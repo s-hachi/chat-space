@@ -11,7 +11,7 @@
 ### Association
 
 - has_many :groups, through: :members
-- belongs_to :member
+- has_many :members
 - has_many :messages
 
 ## members Table
