@@ -1,4 +1,4 @@
-# DB設計
+# README
 
 ## users Table
 
@@ -11,14 +11,15 @@
 ### Association
 
 - has_many :groups, through: :members
+- belongs_to :member
 - has_many :messages
 
 ## members Table
 
 |Column|Type|Option|
 |------|----|------|
-|group_id|integer|unique: true, foreign_key: true|
-|user_id|integer|unique: true, foreign_key: true|
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 
 ### Association
 
@@ -34,16 +35,17 @@
 ### Association
 
 - has_many :users, through: :members
+- has_many :members
 - has_many :messages
 
 ## messages Table
 
 |Column|Type|Option|
 |------|----|------|
-|group_id|integer|foreign_key: true|
-|user_id|integer|foreign_key: true|
-|message|text||
-|update|date|null: false|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|message|text|
+|image|string|
 
 ### Association
 
