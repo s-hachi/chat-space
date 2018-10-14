@@ -1,0 +1,59 @@
+.sidebar{
+  float: left;
+  width: 300px;
+  height: 100vh;
+  &__user{
+    width: 100%;
+    height: 15%;
+    background-color: #253141;
+    position: relative;
+    &-content{
+      height: 50px;
+      line-height: 50px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: inline-block;
+      line-height: 50px;
+      color: #fff
+    }
+    &-name{
+      display: inline-block;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: Bold;
+      color: $white;
+    }
+    &--new-group{
+      display: inline-block;
+      padding-left: 50px;
+      color: $white;
+    }
+    &--edit{
+      display: inline-block;
+      color: $white;
+    }
+  }
+  &__groups{
+    width: 100%;
+    height: 85%;
+    background-color: #2f3e51;
+    &-list{
+      height: 100%;
+      color: $white;
+    }
+  }
+  &__group{
+    padding: 20px;
+    &-name{
+      margin-bottom: 5px;
+      font-size: 15px;
+      color: $white;
+    }
+    &-content{
+      font-size: 11px;
+      color: $white;
+    }
+  }
+}

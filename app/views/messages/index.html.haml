@@ -1,0 +1,42 @@
+.notification
+  .notification__content チャットグループが作成されました。
+.sidebar
+  .sidebar__user
+    .sidebar__user-content
+      .sidebar__user-name user
+      = link_to "#", {class: "sidebar__user--new-group"} do
+        %i.fa.fa-pencil-square-o.icon
+      = link_to "#", {class: "sidebar__user--edit"} do
+        %i.fa.fa-cog.icon
+  .sidebar__groups
+    .sidebar__groups-list
+      .sidebar__group
+        .sidebar__group-name group
+        .sidebar__group-content message
+      .sidebar__group
+        .sidebar__group-name group
+        .sidebar__group-content message
+.main
+  .main__header
+    .main__header--group
+      .main__header--group-name group name
+      = link_to "edit", "#", {:class => "main__header--edit-btn"}
+    .main__header-member member
+  .main__body
+    .main__messages-list
+      .main__message
+        .main__message-member member
+        .main__message-date date
+        .main__message-content display message
+      .main__message
+        .main__message-member member
+        .main__message-date date
+        .main__message-content display message
+  .main__footer
+    %form.main__footer-content{action: "#"}
+      .main__footer-form
+        = text_field :message, :text, {class: "main__footer-text", placeholder: "type a message"}
+        %label.main__footer--chat-file{for: "message_image"}
+          %i.fa.fa-picture-o
+          = file_field :message, :image, {class: "image"}
+        = button_tag "Send", {type: "submit", class: "main__footer-btn"}
